@@ -1,5 +1,5 @@
 # Create a new instance
-resource "google_compute_instance" "ubuntu-xenial" {
+/*resource "google_compute_instance" "ubuntu-xenial" {
    name = "ubuntu-xenial"
    machine_type = "f1-micro"
    zone = "us-west1-a"
@@ -15,4 +15,4 @@ network_interface {
 service_account {
    scopes = ["userinfo-email", "compute-ro", "storage-ro"]
    }
-}
+} */
