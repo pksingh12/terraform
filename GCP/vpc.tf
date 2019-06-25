@@ -1,6 +1,6 @@
 resource "google_compute_network" "mynetwork" {
-  name                    = "test"
-  auto_create_subnetworks = "false"
-  routing_mode            = "GLOBAL"
-  project                 = "my-demo-228617"
+  name                    = "${var.nw_name}"
+  auto_create_subnetworks = "${var.nw_flag_subnet_autocreate}"
+  routing_mode            = "${var.nw_routing_mode}"
+  project                 = "${var.project_id}"
 }
