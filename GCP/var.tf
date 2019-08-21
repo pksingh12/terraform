@@ -1,3 +1,6 @@
+/*
+ this is for variables
+*/
 variable "nw_name" {
  default = "test"
 }
