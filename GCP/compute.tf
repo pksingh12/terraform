@@ -1,6 +1,6 @@
 # Create a new instance
 resource "google_compute_instance" "kk88ss-master" {
-   name = "ubuntu-xenial"
+   name = "k8s-master1"
    machine_type = "n1-standard-2"
    zone = "us-central1-a"
    boot_disk {
