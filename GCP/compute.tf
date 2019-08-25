@@ -1,11 +1,11 @@
 # Create a new instance
-resource "google_compute_instance" "ubuntu-xenial" {
+resource "google_compute_instance" "kk88ss-master" {
    name = "ubuntu-xenial"
-   machine_type = "f1-micro"
-   zone = "us-west1-a"
+   machine_type = "n1-standard-2"
+   zone = "us-central1-a"
    boot_disk {
       initialize_params {
-      image = "ubuntu-1604-lts"
+      image = "k8s-master-img"
    }
 }
 network_interface {
@@ -15,4 +15,9 @@ network_interface {
 service_account {
    scopes = ["userinfo-email", "compute-ro", "storage-ro"]
    }
+metadata_startup_script = "#!/bin/bash \n git clone https://github.com/pksingh12/temp.git \n cd ./temp/myrole \n wget https://docs.projectcalico.org/v3.8/manifests/calico.yaml \n ansible-playbook --connect local test.yaml > ansi.log" 
+
+
+
+
 } 
